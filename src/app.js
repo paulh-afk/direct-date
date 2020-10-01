@@ -2,14 +2,12 @@ import "./style.scss";
 
 const dateElement = document.querySelector("h1");
 
-const date = new Date();
+const dateDayNow = new Date().toLocaleDateString("fr-FR", {
+  day: "numeric",
+  weekday: "long",
+});
 
-dateElement.append(
-  date.toLocaleDateString("fr-FR", {
-    day: "numeric",
-    weekday: "long",
-  })
-);
+const DayNow = dateDayNow.toString();
 
 const dateArr = (date) => {
   const arr = date.split(" ");
@@ -17,10 +15,11 @@ const dateArr = (date) => {
 };
 
 const firstLetterUp = (arr) => {
-  const text = arr.map((elem) => {
+  arr.forEach((elem) => {
     return elem.charAt(0).toUpperCase() + elem.substring(1);
   });
+  console.log(test);
 };
 
-console.log(date);
-dateArr(date.toString());
+console.log(dateDayNow);
+dateArr(dateDayNow.toString());
