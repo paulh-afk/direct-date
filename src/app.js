@@ -15,11 +15,12 @@ const dateArr = (date) => {
 };
 
 const firstLetterUp = (arr) => {
-  arr.forEach((elem) => {
+  const text = arr.map((elem) => {
     return elem.charAt(0).toUpperCase() + elem.substring(1);
   });
-  console.log(test);
+  dateElement.append(text);
 };
 
-console.log(dateDayNow);
-dateArr(dateDayNow.toString());
+// arr to text au lieu de map()
+
+dateArr(DayNow.toString());
