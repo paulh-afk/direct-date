@@ -5,13 +5,42 @@
   body {
     height: 100vh;
     background: linear-gradient(to top right, #1abc9c, #16a085);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid:
+      "header" auto
+      "content" 1fr
+      "footer" auto
+      / auto;
+    header {
+      grid-area: header;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      h2 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.3rem;
+        color: #fff;
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: content;
       color: #fff;
       font-size: 5rem;
-      font-family: "Roboto", sans-serif;
+    }
+    footer {
+      grid-area: footer;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      padding: 1rem;
+      font-size: 1.5rem;
     }
   }
 }
